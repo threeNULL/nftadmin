@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import "./colorpalette.scss";
+
+// Variables
+$button-focus-border-color: black;
+$background: $beige;
+
+@import "../../node_modules/bulma/bulma.sass";
+@import "./helpers.scss";
+@import "./colors.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// Styles for the whole app
+::-moz-focus-inner {
+  border: 0;
+}
+
+.button:focus:not(:active),
+.button.is-focused:not(:active) {
+  box-shadow: initial !important;
+}
+
+.input:focus:not(:active),
+.input.is-focused:not(:active) {
+  border: 1px solid #b5b5b5 !important;
+  box-shadow: initial !important;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto !important;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", cursive;
+  color: $black;
+}
+
+p {
+  color: black !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.input:hover,
+.textarea:hover,
+.select select:hover,
+.is-hovered.input,
+.is-hovered.textarea,
+.select select.is-hovered {
+  border-color: none !important;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus,
+.is-focused.input,
+.is-focused.textarea,
+.select select.is-focused,
+.input:active,
+.textarea:active,
+.select select:active,
+.is-active.input,
+.is-active.textarea,
+.select select.is-active {
+  border-color: #b5b5b5 !important;
+  box-shadow: initial !important;
+}
+
+/*
+     Bulma overwrites
+*/
+
+.columns {
+  margin: 0 !important;
+}
+
+/*
+  Overwrite Popup Styles
+ */
+.popup-overlay[data-popup="modal"] {
+  background-color: $grey-lighter;
+  opacity: 1;
+}
+
+.popup-content {
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02) !important;
+  border: none !important;
+  overflow: hidden;
+  z-index: 1000 !important;
+  opacity: 1;
+}
