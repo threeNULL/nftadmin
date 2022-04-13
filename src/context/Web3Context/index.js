@@ -68,21 +68,6 @@ export function Web3Provider(props) {
         const { chainId: _chainId } = await _provider.getNetwork();
 
         setChainId(_chainId);
-
-        window.ethereum.on('accountsChanged', (accounts) => {
-          window.location.reload();
-        });
-
-        window.ethereum.on('chainChanged', (newChain) => {
-          // Handle the new chain.
-          // Correctly handling chain changes can be complicated.
-          // We recommend reloading the page unless you have good reason not to.
-          window.location.reload();
-        });
-
-        window.ethereum.on('disconnect', () => {
-          window.location.reload();
-        });
       } catch (e) {
         console.log(e);
       }
@@ -92,18 +77,34 @@ export function Web3Provider(props) {
   }, []);
 
   useEffect(() => {
+    window.ethereum.on('accountsChanged', () => {
+      // if the user is already logged in, reload the page
+      if (acc) {
+        window.location.reload();
+      }
+    });
+
+    window.ethereum.on('chainChanged', () => {
+      // Handle the new chain.
+      // Correctly handling chain changes can be complicated.
+      // We recommend reloading the page unless you have good reason not to.
+      window.location.reload();
+    });
+
+    window.ethereum.on('disconnect', () => {
+      window.location.reload();
+    });
+  }, [acc]);
+
+  useEffect(() => {
     setChain(getChainNameById(chainId));
   }, [chainId]);
 
   const login = async () => {
     try {
-      console.log('Login with signer', provider);
       const accounts = await provider.send('eth_requestAccounts', []);
 
-      if (accounts.length === 0) {
-        // MetaMask is locked or the user has not connected any accounts
-        console.log('Please connect to MetaMask.');
-      } else if (accounts[0] !== acc) {
+      if (accounts[0] !== acc) {
         // setting acc!
         setAcc(accounts[0]);
       }

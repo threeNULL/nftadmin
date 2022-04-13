@@ -41,7 +41,7 @@ function LoginButton() {
                 Check the MetaMask Popup!
               </p>
               <p>
-                Important: Please take note that this is a beta version and is provided on an "as is" and "as available" basis. NFT Admin does not give any warranties and will not be liable for any loss, direct or indirect through continued use of this website.
+                Important: Please take note that this is a beta version and is provided on an &quot;as is&quot; and &quot;as available&quot; basis. NFT Admin does not give any warranties and will not be liable for any loss, direct or indirect through continued use of this website.
               </p>
             </div>
           </div>

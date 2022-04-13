@@ -33,7 +33,6 @@ const useAPI = () => {
 
   const post = async (url, data, _config = {}) => {
     try {
-
       const config = {
         headers: {},
         cancelToken: signal.token,
@@ -50,7 +49,6 @@ const useAPI = () => {
 
   const patch = async (url, data, _config = {}) => {
     try {
-
       const config = {
         headers: {},
         cancelToken: signal.token,
@@ -67,7 +65,6 @@ const useAPI = () => {
 
   const put = async (url, data, _config = {}) => {
     try {
-
       const config = {
         headers: {},
         cancelToken: signal.token,
@@ -84,7 +81,6 @@ const useAPI = () => {
 
   const del = async (url, _config = {}) => {
     try {
-
       const config = {
         headers: {},
         cancelToken: signal.token,

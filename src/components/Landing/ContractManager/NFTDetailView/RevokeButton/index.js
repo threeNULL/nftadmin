@@ -17,7 +17,7 @@ import InfoPopup from 'components/utils/InfoPopup';
 
 function RevokeButton(props) {
   const { nft } = props;
-  const { tokenAddress, tokenId } = nft;
+  const { tokenAddress } = nft;
 
   const {
     setApprovalForAll, account, waitForTransaction, isApprovedForAll,

@@ -14,7 +14,6 @@ function ContractManager() {
     isAuthenticated,
   } = useContext(Web3Context);
 
-
   if (!isAuthenticated) {
     return (
       <div

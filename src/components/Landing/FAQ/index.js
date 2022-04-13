@@ -40,9 +40,21 @@ function FAQ() {
           >
             Is it safe to use NFT Admin?
           </p>
-          <p>
-            It is totally safe to use NFT Admin! You can review the source code HERE.
-          </p>
+          <div>
+            <p
+              className="is-inline"
+            >
+              It is totally safe to use NFT Admin! You can review the source code
+            </p>
+            <a
+              href="https://github.com/threeNULL/nftadmin"
+              className="is-info has-text-underlined ml-1 is-inline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here.
+            </a>
+          </div>
 
           <p
             className="has-text-weight-bold mt-3"

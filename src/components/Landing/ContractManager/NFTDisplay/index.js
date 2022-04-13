@@ -13,7 +13,7 @@ import Web3Context from 'context/Web3Context';
 function NFTDisplay(props) {
   const { nft, onClick, waitTime } = props;
 
-  const { tokenAddress, metadata } = nft;
+  const { metadata } = nft;
 
   const { name, description, image } = metadata;
 
@@ -50,8 +50,6 @@ function NFTDisplay(props) {
       img.onerror = () => {
         setNotFound(true);
       };
-
-      // TODO: if we receive a 404, show a NOT FOUND image
     }, waitTime || 0);
 
     return () => {

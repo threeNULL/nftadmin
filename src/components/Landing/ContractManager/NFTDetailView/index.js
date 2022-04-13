@@ -21,7 +21,6 @@ import ApproveButton from './ApproveButton';
 import ApproveAllButton from './ApproveAllButton';
 import ContractLink from '../ContractLink';
 import TokenIdDisplay from '../TokenIdDisplay';
-import CopyButton from 'components/utils/CopyButton';
 
 function NFTDetailView(props) {
   const { nft } = props;

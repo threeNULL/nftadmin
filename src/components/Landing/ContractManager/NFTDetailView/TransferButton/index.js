@@ -18,9 +18,9 @@ import InfoPopup from 'components/utils/InfoPopup';
 
 function TransferButton(props) {
   const { nft } = props;
-  console.log(nft);
+
   const {
-    tokenAddress, tokenId, tokenSymbol, tokenName,
+    tokenAddress, tokenId,
   } = nft;
 
   const { safeTransferFrom, account, waitForTransaction } = useContext(Web3Context);
