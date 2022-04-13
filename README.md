@@ -1,4 +1,4 @@
-# nftadmin
+# NFT Admin
 
 This is the offical repository for [`NFT Admin`](https://nftadmin.xyz).
 
